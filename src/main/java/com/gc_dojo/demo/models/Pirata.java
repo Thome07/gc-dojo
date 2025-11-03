@@ -14,7 +14,7 @@ import java.util.List;
 public class Pirata {
     private static int counter = 0;
 
-    public Pirata(int id, String nome, Raca raca, String bando, StatusPirata statusPirata) {
+    public Pirata(Integer id, String nome, Raca raca, String bando, StatusPirata statusPirata) {
         counter++;
         this.id = counter;
         this.nome = nome;
@@ -26,7 +26,7 @@ public class Pirata {
     public Pirata(){}
 
     @Id
-    private int id;
+    private Integer id;
 
     private String nome;
     private Raca raca;

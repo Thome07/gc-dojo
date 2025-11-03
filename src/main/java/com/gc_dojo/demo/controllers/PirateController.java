@@ -13,13 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-// gente vamos criar o createPirate
-
-// eu preciso desse pc
-// igor abre no outro pc pedrosouza458 repositorio tasky ele tá publico.
 @RestController
 @RequestMapping("/pirate")
-// olha na classe o que tem encima
 public class PirateController {
     private final PiratesRepositories piratesRepositories;
 
@@ -27,11 +22,8 @@ public class PirateController {
         this.piratesRepositories = piratesRepositories;
     }
 
-    // me mostra o createTask vamos deixar pro final melhor se todo o resto tiver pronto
-    // é que os metodos é o mais chato de fazer
-    // vamos terminar esse primeiro
     @PostMapping("/")
-    public ResponseEntity<Object> CreatePirate(@RequestBody Pirata pirate) {
+    public ResponseEntity<Object> createPirate(@RequestBody Pirata pirate) {
         // tem o {id}
         try {
             piratesRepositories.save(pirate);
@@ -107,7 +99,6 @@ public class PirateController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
     }
-    // getById
 }
 
 
